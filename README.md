@@ -1,269 +1,126 @@
-# Awesome-Cloud-Cost-Management
+# Awesome Cloud Cost Management ☁️💰
 
-## Top Cloud Cost Management (FinOps) Platforms Ecosystem
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+![FinOps Specification](https://img.shields.io/badge/FOCUS-1.0-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
+A curated directory of top **Cloud Cost Management (FinOps) platforms**, open-source tools, Kubernetes cost allocation engines, multi-cloud cost visibility dashboards, shift-left Terraform cost estimation CLI tools, and automated cloud optimization solutions.
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Cost Visibility, Anomaly Detection, Resource Optimization & FinOps Automation*  
-
-**Last updated: September 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Cost Management (FinOps)**. These tools help platform teams, finance, and engineering leaders monitor cloud spend, allocate costs to teams, detect anomalies, and optimize resource utilization across AWS, Azure, GCP, and Kubernetes.
-
-
-
-**Examples** include CloudZero, Finout, Cast AI, Apptio Cloudability, Flexera One, Spot by NetApp, Vantage, Densify, Zesty, ProsperOps, Kubecost, IBM Turbonomic, Harness Cloud Cost Management, CloudHealth by VMware, and nOps (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom FinOps automation, and transparent cost data — ideal for teams that need full control over their cloud cost pipeline without per-resource SaaS fees or vendor lock-in.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[CloudZero](https://www.cloudzero.com/)**  
-
-  Cloud cost intelligence platform focused on **unit economics** — answering "what does this customer or feature cost us" rather than just infrastructure totals. Hourly granularity, long retention, and integration breadth beyond the Big 3 clouds. Single subscription model.
-
-
-
-- **[Finout](https://www.finout.io/)**  
-
-  FinOps platform with **MegaBill** technology that unifies and normalizes billing data from multiple cloud providers and SaaS tools. Provides cost visibility, anomaly detection, and Kubernetes cost management.
-
-
-
-- **[Cast AI](https://cast.ai/)**  
-
-  Autonomous Kubernetes cost optimization platform. Actively right-sizes pods, selects optimal instance types, manages spot interruptions, and consolidates nodes without manual intervention. For teams ready to act on cost data, not just observe it.
-
-
-
-- **[Apptio Cloudability](https://www.apptio.com/products/cloudability/)**  
-
-  Enterprise FinOps platform (IBM) for cloud cost management, optimization, and governance. Provides allocation, anomaly detection, and commitment management across multi-cloud environments.
-
-
-
-- **[Flexera One](https://www.flexera.com/)**  
-
-  Hybrid IT and cloud cost management platform. Provides cost visibility, optimization recommendations, and governance across cloud, SaaS, and on-premises.
-
-
-
-- **[Spot by NetApp](https://spot.io/)**  
-
-  Cloud infrastructure optimization platform. Automates cluster scaling, bin-packing, and spot instance management to reduce compute costs by 60-90%.
-
-
-
-- **[Vantage](https://www.vantage.sh/)**  
-
-  Cloud cost transparency platform with flat annual fee. Provides Kubernetes cost reporting, virtual tagging for allocation, and multi-cloud cost visibility.
-
-
-
-- **[Densify](https://www.densify.com/)**  
-
-  Cloud resource optimization using machine learning for rightsizing and workload placement across Kubernetes and virtualized environments.
-
-
-
-- **[Zesty](https://zesty.co/)**  
-
-  Automated cloud cost optimization platform. Dynamically adjusts committed use discounts and reserved instances based on real-time workload demand.
-
-
-
-- **[ProsperOps](https://www.prosperops.com/)**  
-
-  Automated commitment management platform. Optimizes Reserved Instances and Savings Plans to reduce cloud costs without manual intervention.
-
-
-
-- **[Kubecost](https://www.kubecost.com/)**  
-
-  Commercial Kubernetes cost management platform built on the OpenCost engine (IBM). Adds bill reconciliation for discounts, reserved instances, and spot pricing, plus rightsizing recommendations, anomaly detection, and multi-cluster aggregation. Free edition supports unlimited clusters up to 250 cores with 15-day retention .
-
-
-
-- **[IBM Turbonomic](https://www.ibm.com/products/turbonomic)**  
-
-  Application resource management platform. Assures performance while optimizing cost across cloud, on-premises, and hybrid environments.
-
-
-
-- **[Harness Cloud Cost Management](https://harness.io/products/cloud-cost-management)**  
-
-  Cloud cost management module within the Harness platform. Provides Kubernetes cost visibility, anomaly detection, and optimization recommendations. Cost estimation in IaCM uses Infracost for Terraform plans .
-
-
-
-- **[CloudHealth by VMware](https://www.vmware.com/products/cloudhealth.html)**  
-
-  Multi-cloud management platform with cost optimization, governance, and security capabilities.
-
-
-
-- **[nOps](https://www.nops.io/)**  
-
-  AWS cost optimization and governance platform with container visibility, automated tagging, and commitment management.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Cloud Cost Governance & Automation
-
-
-
-- **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)**  
-
-  **The foundational open-source cloud governance and cost optimization engine.** CNCF Incubating Project under **Apache 2.0** license . **YAML-based DSL** for defining policies that filter, tag, and apply actions to cloud resources . Supports **AWS, Azure, and GCP** . **Cost management capabilities**: off-hours scheduling (turn off dev instances at night), garbage collection of unused resources (unattached EBS volumes, idle RDS instances), and utilization-based tagging . Automatically provisions serverless functions for real-time enforcement or runs as a cron job . Real-world example: policy to stop EC2 instances with 14-day average CPU utilization below 1.5% and mark for termination .
-
-
-
-- **[Infracost](https://github.com/infracost/infracost)**  
-
-  **Open-source cloud cost intelligence for engineers and CI/CD.** Shows cloud cost estimates for **Terraform, Terragrunt, CloudFormation, and AWS CDK** before changes are deployed . Features **PR comments** with cost diffs, IDE extensions (VS Code, JetBrains, Neovim, Zed), AI agent skills for Claude Code and Cursor, and **CI/CD integrations** . Supports **1,100+ resources across AWS, Azure, and Google Cloud** . **Free and open source** with optional Infracost Cloud SaaS for team policies . Harness IaCM integrates Infracost for cost estimation in Terraform pipelines .
-
-
-
-### Kubernetes Cost Visibility
-
-
-
-- **[OpenCost](https://github.com/opencost/opencost)**  
-
-  **CNCF Incubating open-source cost monitoring for Kubernetes and cloud spend.** Provides real-time cost allocation by cluster, node, namespace, controller, service, or pod . Multi-cloud support (AWS, Azure, GCP, Oracle Cloud, DigitalOcean) and on-premises via custom CSV pricing . GPU costs, carbon costs, and **MCP server for AI agents** . **Apache-2.0**. **Key limitation**: Uses on-demand list pricing — does not reconcile negotiated discounts, committed-use discounts, or enterprise discount programs. The gap can reach **30-50%** for enterprise accounts .
-
-
-
-- **[Kubecost (Free Tier)](https://github.com/kubecost/cost-analyzer-helm-chart)**  
-
-  Commercial product built on OpenCost engine, with a **free tier supporting unlimited clusters up to 250 cores** and **15-day metric retention** . Adds rightsizing recommendations, anomaly detection, and budget alerts beyond OpenCost's visibility-only scope . **Key difference**: OpenCost is the allocation engine; Kubecost is the product built on it .
-
-
-
-### Cloud Asset Inventory & Optimization
-
-
-
-- **[Komiser](https://github.com/tailwarden/komiser)**  
-
-  **Open-source cloud resource manager and inventory dashboard.** Scans cloud accounts, builds a full inventory of services, and surfaces misconfigurations, underutilized infrastructure, and hidden cost drivers . Supports **AWS, Azure, GCP, DigitalOcean, Civo, and more** . Provides a dashboard to understand resource dependencies and uncover idle, underutilized, and untagged resources .
-
-
-
-- **[Steampipe](https://github.com/turbot/steampipe)**  
-
-  **Open-source tool for querying cloud APIs using SQL with zero-ETL.** 150+ plugins covering AWS, Azure, GCP, and Kubernetes . Surface idle resources, underutilized instances, and spend patterns directly via SQL . **Mods** (dashboards) extend capabilities for AWS Well-Architected, compliance, and cost views .
-
-
-
-- **[StackQL](https://github.com/stackql/stackql)**  
-
-  **Open-source SQL-based cloud resource management.** Uses a "zero-ETL" approach with SQL interfaces to query and manage cloud APIs . Supports resource creation in addition to querying .
-
-
-
-### FinOps Data Standards & Dashboards
-
-
-
-- **[FOCUS Specification](https://github.com/FinOps-Open-Cost-and-Usage-Spec)**  
-
-  **FinOps Open Cost and Usage Specification** — an open-source technical specification that normalizes cost and usage billing data across cloud vendors . Supported by the FinOps Foundation. Aims to simplify multi-cloud cost management by standardizing data across platforms, making FinOps skills more transferable . **320 GitHub stars**, active development.
-
-
-
-- **[Apache Superset](https://github.com/apache/superset)**  
-
-  **Open-source data exploration and visualization platform.** Used for building FinOps dashboards on FOCUS-formatted billing data . 56% of FinOps practitioners use homegrown tools and 74% use homegrown reports .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Cost Governance**: **Cloud Custodian** (CNCF Incubating, YAML DSL, multi-cloud) .
-
-- **Cost Estimation**: **Infracost** (Terraform/OpenTofu/CloudFormation, PR comments, IDE extensions) .
-
-- **Kubernetes Cost**: **OpenCost** (CNCF Incubating, allocation engine) , **Kubecost Free** (250-core limit, 15-day retention) .
-
-- **Asset Inventory**: **Komiser** (dashboard, multi-cloud) , **Steampipe** (SQL queries, 150+ plugins) .
-
-- **Data Standards**: **FOCUS** (FinOps Foundation, billing data normalization) .
-
-
-
-**Frameworks for building custom systems**: Combine **Cloud Custodian** for cost governance and automation (off-hours scheduling, garbage collection), **Infracost** for shift-left cost estimation in CI/CD, **OpenCost** for Kubernetes cost allocation, and **Komiser** or **Steampipe** for cloud asset inventory. Add **Apache Superset** or **Grafana** for dashboards on FOCUS-formatted billing data.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Cloud cost management tools require accurate cloud billing API integration; on-demand list pricing may misrepresent actual invoices by **30-50%** without reconciliation .
-
-- **Open-source reality**: The open-source ecosystem for cloud cost management is **mature and production-ready** at the **cost governance** (**Cloud Custodian**), **cost estimation** (**Infracost**), and **Kubernetes allocation** (**OpenCost**) layers. **FOCUS** provides the open standard for billing data normalization . However, **commercial platforms** (CloudZero, Apptio Cloudability, Flexera One) provide deeper **bill reconciliation** (discounts, reserved instances, enterprise agreements), **automated optimization**, and **enterprise support** that open-source alternatives cannot match without significant engineering investment. The open-source path is most viable for organizations with strong platform engineering capacity or for specific use cases like Kubernetes cost visibility or shift-left cost estimation.
-
-
+![Awesome Cloud Cost Management Banner](./assets/banner.svg)
 
 ---
 
+## 💡 Market Landscape & Sector Analysis
 
+> [!NOTE]
+> **Market Size & Forecast**: The global Cloud Cost Management and FinOps Software Market is valued at **$10.8 Billion in 2026** and is projected to expand to **$24.5 Billion by 2032** (CAGR of ~14.8%), driven by massive enterprise multi-cloud spend, AI infrastructure workloads, and Kubernetes deployment scale.
+> 
+> **Market Fragmentation**: The sector is **highly fragmented**. Rather than a single "winner-take-all" platform, the landscape is divided across hyperscaler-native tools (AWS Cost Explorer, Azure Cost Management), enterprise billing suites (Apptio/IBM, Flexera, Broadcom CloudHealth), autonomous rate & commitment optimizers (ProsperOps, Zesty), and specialized Kubernetes / developer-centric solutions (Kubecost, Cast AI, Infracost).
 
-**Made for FinOps practitioners, platform engineers, cloud architects, and finance teams.**  
+---
 
-Let's make cloud cost management more open, transparent, and efficient.
+## 📋 Table of Contents
+
+- [🏢 SaaS & Hosted Platforms](#-saas--hosted-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🛠️ Additional Open-Source Options & Frameworks](#️-additional-open-source-options--frameworks)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Community](#-support--community)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
+- [📈 Star History](#-star-history)
+
+---
+
+## 🏢 SaaS & Hosted Platforms
+
+Below is a curated comparison of major commercial FinOps and Cloud Cost Management SaaS platforms, sorted by **Company Size / Valuation / Funding** (descending).
+
+| Product 🚀 | Description 📝 | Company Scale / Valuation / Funding 💰 | Starting Price 💵 | Free Tier / Free Trial Limit 🎁 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[IBM Turbonomic](https://www.ibm.com/products/turbonomic)** | Application resource management platform assuring performance while optimizing cost across hybrid clouds. | **$160B+ Market Cap** (Part of IBM; Turbo acq. for $1.5B) | Custom tier based on Managed Virtual Servers (e.g. ~$37,900/yr for 200 MVS) | 30-day free trial via AWS Marketplace |
+| **[Apptio Cloudability](https://www.apptio.com/products/cloudability/)** | Enterprise FinOps platform for multi-cloud cost allocation, anomaly detection, and commitment management. | **$4.6B Acquisition** (Acquired by IBM in 2023) | ~$2,500/month (billed annually for spend up to $1M/yr) | 14-day free trial upon request |
+| **[CloudHealth by VMware](https://www.vmware.com/products/cloudhealth.html)** | Enterprise multi-cloud cost management, governance, security, and policy enforcement platform. | **$61B Acquisition** (Part of VMware / Broadcom) | Tiered based on monthly cloud spend (~2.2% - 3.0% of managed spend) | 14-day free trial upon request |
+| **[Flexera One](https://www.flexera.com/)** | Hybrid IT asset and cloud cost management platform providing cost visibility, optimization, and governance. | **$3B+ Enterprise Valuation** (Thoma Bravo backed) | Custom enterprise quotes based on managed node/server count | 14-day free trial (via Spot by Flexera listing) |
+| **[Spot by NetApp](https://spot.io/)** | Cloud infrastructure optimization platform for automated cluster scaling, bin-packing, and spot management. | **$15B+ NetApp Market Cap** (Divested/Partnered with Flexera) | Usage-based per vCPU-hour managed | 14-day free trial & Free tier up to 20 virtual machines |
+| **[Kubecost](https://www.kubecost.com/)** | Commercial Kubernetes cost management platform built on OpenCost engine with multi-cluster aggregation. | **Acquired by IBM (2024)** (Prior funding: $67M+) | Business plan starting at $449/month | Free Foundations edition for unlimited clusters up to 250 cores (15-day retention) |
+| **[Cast AI](https://cast.ai/)** | Autonomous Kubernetes cost optimization platform. Rightsizes pods, selects instance types, manages spot instances. | **$73M Total Funding** ($35M Series B in 2023) | Growth Plan starting at base tier + $0.00694 per CPU/hour managed | Free Forever Kubernetes Cost Monitoring tier (unlimited clusters) |
+| **[CloudZero](https://www.cloudzero.com/)** | Cloud cost intelligence platform focused on unit economics, hourly granularity, and multi-cloud & SaaS spend tracking. | **$118M Total Funding** ($56M Series C in May 2025) | $19.00/unit/month ($1k AWS spend unit; ~1.9% of spend) | Free trial via AWS Marketplace & free Cloud Cost Assessment tool |
+| **[Finout](https://www.finout.io/)** | FinOps platform with MegaBill technology that unifies billing data from cloud providers and SaaS tools. | **$45M Total Funding** ($26.3M Series B in 2024) | Tiered annual subscription based on committed cloud spend | 14-day free trial (all features) |
+| **[Zesty](https://zesty.co/)** | Automated cloud cost optimization platform for dynamic commitment management (RIs/Savings Plans) and disk scaling. | **$42M Total Funding** ($75M valuation estimate) | Success-based pricing (% of realized savings) or spend tier | Free Potential Savings Analysis report |
+| **[ProsperOps](https://www.prosperops.com/)** | Automated commitment management platform optimizing Reserved Instances and Savings Plans. | **$33M Total Funding** (H.I.G. Growth Growth round) | Performance-based Savings Share fee (% of realized savings) | Free Savings Analysis & trial assessment |
+| **[Vantage](https://www.vantage.sh/)** | Cloud cost transparency platform with flat annual fees, Kubernetes cost reporting, and virtual tagging. | **$25M Total Funding** ($21M Series A led by Scale Venture Partners) | Pro plan starting at $300/month | Free Forever Starter plan up to $2,500 tracked monthly cloud spend |
+| **[nOps](https://www.nops.io/)** | AWS cost optimization platform with container visibility, automated tagging, and commitment management. | **$15M+ Total Funding** (AWS Advanced Tech Partner) | Fixed fee for visibility + performance share on rate optimization savings | 14-day free trial & free 30-minute savings analysis |
+| **[Densify](https://www.densify.com/)** | Cloud resource optimization using machine learning for rightsizing and workload placement (Kubex). | **$60M+ Total Funding** (Private Equity backed) | Custom enterprise quote based on managed infrastructure scope | 14-day free trial |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+Sorted by **GitHub Stars** (descending). Each repository name includes a white social star badge linking directly to its GitHub stargazers page.
+
+| Project 🛠️ | GitHub Stars ⭐ | Description 📝 | License 📜 |
+| :--- | :--- | :--- | :--- |
+| **[Apache Superset](https://github.com/apache/superset)** | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | Modern data exploration and visualization platform. Widely used for building custom enterprise FinOps dashboards on FOCUS-formatted billing data. | Apache-2.0 |
+| **[Infracost](https://github.com/infracost/infracost)** | [![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | Shift-left cloud cost estimates for Terraform, Terragrunt, CloudFormation, and AWS CDK directly in Pull Requests and IDEs. | Apache-2.0 |
+| **[Steampipe](https://github.com/turbot/steampipe)** | [![Stars](https://img.shields.io/github/stars/turbot/steampipe?style=social&color=white)](https://github.com/turbot/steampipe/stargazers) | Zero-ETL engine to query cloud APIs (AWS, Azure, GCP, K8s) using SQL to find idle resources and spend anomalies. | AGPL-3.0 |
+| **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)** | [![Stars](https://img.shields.io/github/stars/cloud-custodian/cloud-custodian?style=social&color=white)](https://github.com/cloud-custodian/cloud-custodian/stargazers) | CNCF Incubating rules engine for cloud governance, off-hours scheduling, tag enforcement, and automated garbage collection. | Apache-2.0 |
+| **[OpenCost](https://github.com/opencost/opencost)** | [![Stars](https://img.shields.io/github/stars/opencost/opencost?style=social&color=white)](https://github.com/opencost/opencost/stargazers) | CNCF Incubating real-time Kubernetes cost allocation engine broke down by namespace, pod, service, and cloud provider. | Apache-2.0 |
+| **[Komiser](https://github.com/tailwarden/komiser)** | [![Stars](https://img.shields.io/github/stars/tailwarden/komiser?style=social&color=white)](https://github.com/tailwarden/komiser/stargazers) | Open-source cloud environment inspector and multi-cloud asset inventory dashboard for surfacing hidden cost drivers. | Apache-2.0 |
+| **[StackQL](https://github.com/stackql/stackql)** | [![Stars](https://img.shields.io/github/stars/stackql/stackql?style=social&color=white)](https://github.com/stackql/stackql/stargazers) | SQL-based framework to query and deploy cloud infrastructure and analyze cost utilization. | MIT |
+| **[Kubecost Helm Chart](https://github.com/kubecost/cost-analyzer-helm-chart)** | [![Stars](https://img.shields.io/github/stars/kubecost/cost-analyzer-helm-chart?style=social&color=white)](https://github.com/kubecost/cost-analyzer-helm-chart/stargazers) | Open-source deployment chart for Kubecost's free tier, bringing cost insights and cluster rightsizing. | Apache-2.0 |
+| **[FOCUS Specification](https://github.com/finopsfoundation/focus)** | [![Stars](https://img.shields.io/github/stars/finopsfoundation/focus?style=social&color=white)](https://github.com/finopsfoundation/focus/stargazers) | FinOps Open Cost and Usage Specification — open specification for standardizing cloud billing data across vendors. | CC-BY-4.0 |
+| **[Awesome FinOps](https://github.com/jmfontaine/awesome-finops)** | [![Stars](https://img.shields.io/github/stars/jmfontaine/awesome-finops?style=social&color=white)](https://github.com/jmfontaine/awesome-finops/stargazers) | Curated community list of FinOps resources, books, courses, standards, and cloud cost control tools. | CC0-1.0 |
+
+---
+
+## 🛠️ Additional Open-Source Options & Frameworks
+
+- **Cost Governance**: [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) (CNCF Incubating, YAML DSL, multi-cloud).
+- **Shift-Left Cost Estimation**: [Infracost](https://github.com/infracost/infracost) (Terraform/OpenTofu/CloudFormation, PR comments, IDE extensions).
+- **Kubernetes Cost Allocation**: [OpenCost](https://github.com/opencost/opencost) (CNCF Incubating engine), [Kubecost Free](https://github.com/kubecost/cost-analyzer-helm-chart) (250-core limit, 15-day retention).
+- **Asset Inventory & Discovery**: [Komiser](https://github.com/tailwarden/komiser) (dashboard, multi-cloud), [Steampipe](https://github.com/turbot/steampipe) (SQL queries, 150+ plugins).
+- **Billing Data Normalization Standard**: [FOCUS Spec](https://github.com/finopsfoundation/focus) (FinOps Foundation standard).
+
+💡 **Building a Custom In-House FinOps Pipeline**: Combine **Cloud Custodian** for automated cost governance (stopping idle dev EC2s at night, purging unattached EBS volumes), **Infracost** for pull-request cost feedback in CI/CD, **OpenCost** for Kubernetes container cost allocation, and **Apache Superset** for executive dashboards built on normalized **FOCUS** data.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please follow these simple guidelines:
+
+1. Fork this repository. 🍴
+2. Create a new feature branch (`git checkout -b feature/add-tool`).
+3. Edit `README.md` following the exact table structure.
+4. Ensure factual pricing, free tier specs, and company scale details.
+5. Open a Pull Request! 🚀
+
+---
+
+## 💖 Support & Community
+
+If you find this repository helpful for your cloud financial management, platform engineering, or DevOps workflow, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it!
+- 🔀 **Fork it** to customize your own team's internal FinOps tool list.
+- 📢 **Share it** on LinkedIn, Twitter/X, Reddit, or Dev.to!
+- ☕ **Sponsor the Maintainer**: [Buy a coffee on GitHub Sponsors](https://github.com/sponsors/ishandutta2007)
+
+---
+
+## ⚠️ Disclaimer
+
+- This directory is a **community-curated list** — not exhaustive and not an endorsement of any single vendor.
+- Cloud cost management software requires accurate cloud billing API integration; on-demand list pricing may misrepresent actual invoices by **30-50%** without proper discount reconciliation.
+- **Open-Source Reality vs. SaaS**: Open-source tools excel at shift-left cost estimation (**Infracost**), governance automation (**Cloud Custodian**), and pod-level allocation (**OpenCost**). However, commercial SaaS platforms (CloudZero, Apptio, Broadcom CloudHealth) provide automated commitment management, complex discount reconciliation, and enterprise support out of the box.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Cloud-Cost-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Cloud-Cost-Management&type=date&legend=top-left)
+
+---
+
+**Made with ❤️ for FinOps practitioners, platform engineers, cloud architects, and finance leaders worldwide.**
