@@ -57,9 +57,9 @@ Below is a curated comparison of major commercial FinOps and Cloud Cost Manageme
 
 ## 🔓 Open-Source GitHub Projects
 
-Sorted by **GitHub Stars** (descending). Each repository name includes a white social star badge linking directly to its GitHub stargazers page.
+Sorted by **GitHub_Stars** (descending). Each repository name includes a white social Stars_Badge linking directly to its GitHub stargazers page.
 
-| Project 🛠️ | GitHub Stars ⭐ | Description 📝 | License 📜 |
+| Project 🛠️ | GitHub_Stars ⭐ | Description 📝 | License 📜 |
 | :--- | :--- | :--- | :--- |
 | **[Apache Superset](https://github.com/apache/superset)** | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | Modern data exploration and visualization platform. Widely used for building custom enterprise FinOps dashboards on FOCUS-formatted billing data. | Apache-2.0 |
 | **[Infracost](https://github.com/infracost/infracost)** | [![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | Shift-left cloud cost estimates for Terraform, Terragrunt, CloudFormation, and AWS CDK directly in Pull Requests and IDEs. | Apache-2.0 |
